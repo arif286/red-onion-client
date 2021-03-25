@@ -1,0 +1,6 @@
+.food-items h6 {
+  padding: 15px;
+}
+.food-items h6:first-child {
+  border-bottom: 2px solid tomato;
+}

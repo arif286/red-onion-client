@@ -29,7 +29,16 @@ export const handleGoogleSingIn = () => {
       })
       .catch((error) => {
         // Handle Errors here.
-        console.log(error.message);
+        const signInUser = {
+          isSignIn: false,
+          name: '',
+          email: '',
+          password: '',
+          phone: '',
+          photo: '',
+        }
+        signInUser.error = error.message;
+        return signInUser;
       });
 }
 export const logInWithEmailPassword = (email, password) => {
@@ -101,3 +110,37 @@ const updateUserName = (name) => {
       console.log(error);
     });
 };
+
+const fbProvider = new firebase.auth.FacebookAuthProvider();
+
+export const handleFacebookSignIn = () => {
+   return firebase
+    .auth()
+    .signInWithPopup(fbProvider)
+    .then((result) => {
+      const { displayName, email, phoneNumber, photoURL } = result.user;
+      const signInUser = {
+        isSignIn: true,
+        name: displayName,
+        email: email,
+        phone: phoneNumber,
+        photo: photoURL,
+      };
+      return signInUser;
+    })
+     .catch((error) => {
+      console.log(error);
+      const signInUser = {
+        isSignIn: false,
+        name: "",
+        email: "",
+        password: "",
+        phone: "",
+        photo: "",
+      };
+      signInUser.error = error.message;
+      return signInUser;
+
+      // ...
+    });
+}

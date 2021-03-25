@@ -7,7 +7,7 @@ import facebook from "../../onion-restaurent/ICON/Facebook.png";
 import google from "../../onion-restaurent/ICON/Google.png";
 import twitter from "../../onion-restaurent/ICON/Twitter.png";
 import "./Login.css";
-import { handleGoogleSingIn, initializeLoginFramework, logInWithEmailPassword } from "./LoginManager";
+import { handleFacebookSignIn, handleGoogleSingIn, initializeLoginFramework, logInWithEmailPassword } from "./LoginManager";
 
 const bgImage = {
   backgroundImage: `url(${image})`,
@@ -51,7 +51,14 @@ const Login = () => {
     });
     console.log("click me");
   };
-  const handleFacebookLogin = () => {};
+  const handleFacebookLogin = () => {
+    handleFacebookSignIn()
+      .then(res => {
+      setLoggedInUser(res)
+      }).catch(error => {
+      setLoggedInUser(error)
+    })
+  };
   const handleTwitterLogin = () => {};
   return (
     <div style={bgImage}>
@@ -59,7 +66,7 @@ const Login = () => {
       <form className="form-submit" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">Email</label>
         <input
-          defaultValue={loggedInUser.email}
+          defaultValue={loggedInUser?.email}
           name="email"
           placeholder="Your Email"
           type="email"
@@ -71,7 +78,7 @@ const Login = () => {
         {errors.email && <p>Your email is invalid</p>}
         <label htmlFor="password">Password</label>
         <input
-          defaultValue={loggedInUser.password}
+          defaultValue={loggedInUser?.password}
           name="password"
           placeholder="Your Password"
           type="password"
