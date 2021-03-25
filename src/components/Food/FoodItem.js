@@ -1,12 +1,13 @@
 import React from 'react';
 
-const FoodItem = (props) => {
-    console.log(props)
-    const { name, picture, description, price } = props.food;
+const FoodItem = ({food, handleFood}) => {
+
+  const { name, picture, description, price} = food;
+
     return (
       <>
         <div className="col py-3">
-          <div className="card h-100">
+          <div onClick={()=>{handleFood()}} className="card h-100">
             <img src={picture} className="card-img-top fluid" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{ name}</h5>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import logo from '../../onion-restaurent/logo2.png';
-
+import './Header.css';
 const cart = <FontAwesomeIcon icon={faShoppingCart} />;
 const Header = () => {
     const header = {
@@ -33,21 +33,17 @@ const Header = () => {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink
-                    activeClassName="nav-link active"
-                    aria-current="page"
-                    to="/"
-                  >
+                  <NavLink className="header-link" to="/">
                     {cart}
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="nav-link" to="/login">
+                  <NavLink className="header-link" to="/login">
                     Login
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink activeClassName="nav-link" to="/singUp">
+                  <NavLink className="header-link" to="/signUp">
                     Sing up
                   </NavLink>
                 </li>

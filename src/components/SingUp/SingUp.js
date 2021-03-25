@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import image from '../../onion-restaurent/bannerbackground.png';
 import { createAccountWithEmailPassword, initializeLoginFramework } from '../LogIn/LoginManager';
+import WithoutLogin from '../LogIn/WithoutLogin';
 import './SingUp.css';
 const bgImage = {
   backgroundImage: `url(${image})`,
@@ -13,20 +15,26 @@ const bgImage = {
 };
 
 const SingUp = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const { register, handleSubmit, errors } = useForm();
-    initializeLoginFramework();
+  initializeLoginFramework();
+
     const onSubmit = (data) => {
         const { firstName, lastName, email, password } = data;
         const name = `${firstName} ${lastName}`
         createAccountWithEmailPassword(email, password, name)
-        .then(res => {
+          .then(res => {
+            console.log(res)
+            console.log(res.displayName, res.email)
             setLoggedInUser(res);
-        }).catch(errors => {
-            setLoggedInUser(errors);
+          })
+          .catch(error => {
+          console.log(error)
+            setLoggedInUser(error);
         })
     };
-
+   console.log(loggedInUser);
     return (
       <div style={bgImage}>
         <h1 className="form-header"> Create An Account</h1>
@@ -91,6 +99,13 @@ const SingUp = () => {
             <p>The email address is already in use by another account</p>
           )}
         </form>
+        <div>
+          <WithoutLogin />
+          <p className="text-center">
+            Have an account?
+            <Link to="/login">Login now.</Link>
+          </p>
+        </div>
       </div>
     );
 };

@@ -8,12 +8,12 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) =>
-        loggedInUser?.email ? (
+        loggedInUser.email ? (
           children
         ) : (
           <Redirect
             to={{
-              pathname: "/login",
+              pathname: "/signUp",
               state: { from: location },
             }}
           />

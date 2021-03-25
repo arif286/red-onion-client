@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import image from "../../onion-restaurent/bannerbackground.png";
-import facebook from "../../onion-restaurent/ICON/Facebook.png";
-import google from "../../onion-restaurent/ICON/Google.png";
-import twitter from "../../onion-restaurent/ICON/Twitter.png";
-import "./Login.css";
-import { handleFacebookSignIn, handleGoogleSingIn, initializeLoginFramework, logInWithEmailPassword } from "./LoginManager";
+import { initializeLoginFramework, logInWithEmailPassword } from "./LoginManager";
+import WithoutLogin from "./WithoutLogin";
+
 
 const bgImage = {
   backgroundImage: `url(${image})`,
@@ -26,12 +24,12 @@ const Login = () => {
   //   photo: '',
   //   phone: ''
   // });
-  const history = useHistory();
-  const location = useLocation();
-  const { from } = location.state || { from: { pathname: "/" } };
+
 
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
+      initializeLoginFramework();
+
       console.log(data);
       logInWithEmailPassword(data.email, data.password)
         .then(res => {
@@ -42,27 +40,9 @@ const Login = () => {
         })
   };
 
-  initializeLoginFramework();
-  const handleGoogleLogin = () => {
-    handleGoogleSingIn().then((res) => {
-      console.log(res);
-      setLoggedInUser(res);
-      history.replace(from);
-    });
-    console.log("click me");
-  };
-  const handleFacebookLogin = () => {
-    handleFacebookSignIn()
-      .then(res => {
-      setLoggedInUser(res)
-      }).catch(error => {
-      setLoggedInUser(error)
-    })
-  };
-  const handleTwitterLogin = () => {};
   return (
     <div style={bgImage}>
-      <h1 className="form-header">Sing In</h1>
+      <h1 className="form-header">Log In</h1>
       <form className="form-submit" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">Email</label>
         <input
@@ -94,25 +74,13 @@ const Login = () => {
           </p>
         )}
 
-        <input type="submit" value="Sing In" />
+        <input type="submit" value="Login" />
         {setLoggedInUser.success && (
           <p className="text-center">{setLoggedInUser.error}</p>
         )}
       </form>
-
-      <div className="mt-5">
-        <p className="text-center">Or sing up using</p>
-        <div className="d-flex justify-content-center">
-          <p className="icon">
-            <img onClick={handleFacebookLogin} src={facebook} alt="" />
-          </p>
-          <p className="icon">
-            <img onClick={handleTwitterLogin} src={twitter} alt="" />
-          </p>
-          <p className="icon">
-            <img onClick={handleGoogleLogin} src={google} alt="" />
-          </p>
-        </div>
+      <div>
+        <WithoutLogin />
         <p className="text-center">
           Don't have an account?
           <Link to="/singUp">Sing up now.</Link>

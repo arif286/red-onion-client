@@ -1,0 +1,8 @@
+.search-btn {
+  outline: none;
+  background-color: #f91944;
+  display: inline-block;
+  width: 100px;
+  padding: 8px;
+  border-radius: 50px;
+}

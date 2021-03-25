@@ -1,0 +1,13 @@
+.footer-img {
+  width: 150px;
+}
+footer {
+  background-color: #191919;
+  height: 800px;
+}
+.footer-link {
+  color: white;
+}
+.footer-link:hover {
+  color: #878787;
+}

@@ -46,26 +46,17 @@ export const logInWithEmailPassword = (email, password) => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(res => {
-        const { displayName, email, password, phone, photoURL } = res.user;
-        const loggedInUserInfo = {
-          isSignedIn: true,
-          name: displayName,
-          email: email,
-          password: password,
-          photo: photoURL,
-          phone: phone,
-        };
-        loggedInUserInfo.error = '';
-        loggedInUserInfo.success = true;
-      console.log(res.user);
-        return loggedInUserInfo;
+        const newUserInfo = res.user
+        newUserInfo.error = '';
+        newUserInfo.success = true;
+        return newUserInfo;
           })
       .catch((error) => {
-          const loggedInUserInfo = {};
-          loggedInUserInfo.error = error.message;
-        loggedInUserInfo.success = false;
+        const newUserInfo = {}
+        newUserInfo.error = error.message;
+        newUserInfo.success = false;
         console.log(error.message)
-        return loggedInUserInfo;
+        return newUserInfo;
       });
 }
 
@@ -74,12 +65,7 @@ export const createAccountWithEmailPassword = (email, password, name) => {
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((res) => {
-      const { email, password, displayName } = res;
-      const newUserInfo = {
-        email: email,
-        password: password,
-        name: displayName,
-      };
+      const newUserInfo = res.user
       newUserInfo.error = '';
       newUserInfo.success = true;
       updateUserName(name);
@@ -87,7 +73,7 @@ export const createAccountWithEmailPassword = (email, password, name) => {
     })
     .catch((error) => {
       console.log(error);
-      const newUserInfo = {};
+      const newUserInfo = {}
       newUserInfo.error = error.message;
       newUserInfo.success = false;
       return newUserInfo;
@@ -140,7 +126,5 @@ export const handleFacebookSignIn = () => {
       };
       signInUser.error = error.message;
       return signInUser;
-
-      // ...
     });
 }

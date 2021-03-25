@@ -1,5 +1,8 @@
 import React from 'react';
 import background from '../../onion-restaurent/bannerbackground.png';
+import './SearchBar.css';
+
+
 const SearchBar = () => {
     const searchBg = {
         bgImage: {
@@ -23,14 +26,13 @@ const SearchBar = () => {
       >
         <div>
           <h1>Best food waiting for your belly</h1>
-          <div className="d-flex">
+          <div className="d-flex mt-5">
             <input
-              style={searchBg.searchBar}
-              className="form-control"
+              className="form-control searchBar"
               type="text"
               placeholder="Search Your Best Food..."
             />
-            <input type="submit" value="submit" />
+            <input className="search-btn" type="submit" value="Search" />
           </div>
         </div>
       </div>
