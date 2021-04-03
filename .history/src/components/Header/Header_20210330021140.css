@@ -1,0 +1,12 @@
+.header-link {
+  color: black;
+  display: inline-block;
+  padding: 10px;
+}
+.header-link:hover {
+  text-decoration: none;
+  color: #777777;
+}
+.cart-btn {
+  border: none;
+}

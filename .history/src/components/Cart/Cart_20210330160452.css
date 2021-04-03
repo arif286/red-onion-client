@@ -1,0 +1,9 @@
+.delivery-form input {
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+.delivery-form input:first-child {
+  margin-top: 20px;
+}

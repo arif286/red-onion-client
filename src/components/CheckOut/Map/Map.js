@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Cart = () => {
+const Map = () => {
     return (
         <div>
-            <h1>food Cart</h1>
+
         </div>
     );
 };
 
-export default Cart;
+export default Map;

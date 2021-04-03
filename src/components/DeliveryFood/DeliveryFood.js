@@ -33,7 +33,7 @@ const DeliveryFood = () => {
                     notifications each time link is paid and how we dream about
                     our future
                   </p>
-                  <Link>See more</Link>
+                  <Link to='/'>See more</Link>
                 </div>
               </div>
             </div>

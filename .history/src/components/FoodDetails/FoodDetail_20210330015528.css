@@ -1,0 +1,32 @@
+.food-price {
+  font-size: 35px;
+  font-weight: 600;
+  display: inline-block;
+}
+.foodDetails-btn {
+  display: inline-block;
+  width: 100px;
+  padding: 8px;
+  border: none;
+  background-color: #f91944;
+  border-radius: 50px;
+  color: white;
+  font-weight: 500;
+}
+.foodDetails-img {
+  width: 350px;
+}
+
+.add-cart {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #a09f9f;
+  padding: 8px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 18px;
+}
+.add-cart small {
+  padding: 6px;
+  font-weight: 100;
+}

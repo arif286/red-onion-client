@@ -31,10 +31,16 @@ const Header = () => {
               className="collapse  navbar-collapse justify-content-end"
               id="navbarNav"
             >
-              <ul className="navbar-nav">
+              <ul className="navbar-nav align-items-center">
                 <li className="nav-item">
-                  <NavLink className="header-link" to="/">
+                  <button className=" cart-btn" to="/">
                     {cart}
+                    <small className="badge bg-secondary">0</small>
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="header-link" to="/cart">
+                    Deliver food
                   </NavLink>
                 </li>
                 <li className="nav-item">

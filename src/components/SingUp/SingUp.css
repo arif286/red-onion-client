@@ -48,7 +48,7 @@
 
 button[type="submit"],
 .form-submit input[type="submit"] {
-  background: #ec5990;
+  background: #f91944;
   color: white;
   text-transform: uppercase;
   border: none;
@@ -61,7 +61,7 @@ button[type="submit"],
 
 button[type="submit"]:hover,
 .form-submit input[type="submit"]:hover {
-  background: #bf1650;
+  background: #ee1e47;
 }
 
 /* button[type="submit"]:active,
