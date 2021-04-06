@@ -13,7 +13,7 @@ const CheckOut = () => {
   const { count, foodId } = loggedInUser;
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/foodDetails/${foodId}`)
+      .get(`https://red-onion-server-121.herokuapp.com/foodDetails/${foodId}`)
       .then((res) => {
         setCart(res.data);
       })
@@ -53,7 +53,7 @@ const CheckOut = () => {
     orderFood.foodName = foodName;
     console.log(orderFood);
     axios
-      .post("http://localhost:5000/order", orderFood)
+      .post("https://red-onion-server-121.herokuapp.com/order", orderFood)
       .then((res) => setConfirmOrder(res.data))
       .catch((err) => console.log(err));
   };

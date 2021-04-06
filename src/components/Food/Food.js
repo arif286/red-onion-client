@@ -9,9 +9,10 @@ import FoodItem from "./FoodItem";
 const Food = () => {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:5000/foods')
-      .then(res => setFoods(res.data))
-    .catch(err=>console.log(err))
+    axios
+      .get("https://red-onion-server-121.herokuapp.com/foods")
+      .then((res) => setFoods(res.data))
+      .catch((err) => console.log(err));
   }, []);
   let history = useHistory()
 

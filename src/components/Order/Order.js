@@ -11,12 +11,15 @@ const Order = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/orderDetails?email=${loggedInUser.email}`)
-      .then(res => {
-        console.log(res.data)
-        setOrder(res.data)
+    axios
+      .get(
+        `https://red-onion-server-121.herokuapp.com/orderDetails?email=${loggedInUser.email}`
+      )
+      .then((res) => {
+        console.log(res.data);
+        setOrder(res.data);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }, [loggedInUser.email]);
   return (
     <Container className='mt-5'>

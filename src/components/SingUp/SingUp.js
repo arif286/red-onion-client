@@ -28,8 +28,6 @@ const SingUp = () => {
         const name = `${firstName} ${lastName}`
         createAccountWithEmailPassword(email, password, name)
           .then(res => {
-            console.log(res)
-            // console.log(res.displayName, res.email)
             setLoggedInUser(res);
             history.replace(from);
           })
