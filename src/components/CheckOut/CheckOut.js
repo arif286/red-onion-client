@@ -69,14 +69,14 @@ const CheckOut = () => {
         </div>
       ) : (
         <div className="row mt-5 justify-content-between mb-5">
-          <div className="col-md-7 col-sm-12">
+          <div className="col-md-7 col-sm-12 mb-4">
             {!map ? (
               <Map />
             ) : (
               <CheckOutFrom deliverInfo={setDeliverInfo} map={setMap} />
             )}
           </div>
-          <div className="col-md-4 mt-5 col-sm-12 ">
+          <div className="col-md-4 col-sm-12 ">
             <div className="delivery-info">
               <p>
                 <strong>Name:</strong> {name}

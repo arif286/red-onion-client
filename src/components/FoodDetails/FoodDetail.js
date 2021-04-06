@@ -12,7 +12,7 @@ const FoodDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`https://desolate-eyrie-04422.herokuapp.com/foodDetails/${foodId}`)
+      .get(`https://red-onion-server-121.herokuapp.com/foodDetails/${foodId}`)
       .then((res) => {
         setFoodDetail(res.data);
       })
@@ -21,7 +21,7 @@ const FoodDetail = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
-    const { name, picture, price, description2, id } = foodDetail;
+    const { name, picture, price, description2 } = foodDetail;
     const cart = <FontAwesomeIcon icon={faShoppingCart} />;
     const plus = <FontAwesomeIcon icon={faPlus} />;
     const minus = <FontAwesomeIcon icon={faMinus} />;
