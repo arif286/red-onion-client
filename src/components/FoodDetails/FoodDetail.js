@@ -11,11 +11,12 @@ const FoodDetail = () => {
   const [foodDetail, setFoodDetail] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/foodDetails/${foodId}`)
-      .then(res => {
-        setFoodDetail(res.data)
+    axios
+      .get(`https://desolate-eyrie-04422.herokuapp.com/foodDetails/${foodId}`)
+      .then((res) => {
+        setFoodDetail(res.data);
       })
-    .catch(err=>console.log(err))
+      .catch((err) => console.log(err));
   }, [foodId]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
