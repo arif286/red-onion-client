@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-bootstrap';
-import Logo from '../../onion-restaurent/logo2.png';
+import Logo from '../../assets/logo2.png';
 import './Footer.css';
 
 const Footer = () => {

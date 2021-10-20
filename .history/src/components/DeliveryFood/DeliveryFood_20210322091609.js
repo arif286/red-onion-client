@@ -1,5 +1,5 @@
 import React from 'react';
-import burger from '../../onion-restaurent/Image/burger.png';
+import burger from '../../assets/Image/burger.png';
 
 
 const DeliveryFood = () => {

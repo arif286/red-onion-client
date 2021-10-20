@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { UserContext } from "../../App";
-import delivery from "../../onion-restaurent/Image/Group 1151.png";
+import delivery from "../../assets/Image/Group 1151.png";
 const Order = () => {
   const [order, setOrder] = useState();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);

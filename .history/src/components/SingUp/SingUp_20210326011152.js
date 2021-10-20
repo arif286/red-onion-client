@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../App';
-import image from '../../onion-restaurent/bannerbackground.png';
+import image from '../../assets/bannerbackground.png';
 import { createAccountWithEmailPassword, initializeLoginFramework } from '../LogIn/LoginManager';
 import WithoutLogin from '../LogIn/WithoutLogin';
 import './SingUp.css';

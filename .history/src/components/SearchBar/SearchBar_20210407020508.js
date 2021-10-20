@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import background from '../../onion-restaurent/bannerbackground.png';
+import background from '../../assets/bannerbackground.png';
 import './SearchBar.css';
 
 

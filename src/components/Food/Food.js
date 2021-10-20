@@ -19,6 +19,10 @@ const Food = () => {
   const handleFood = (id) => {
     history.push(`/food/details/${id}`)
   }
+  const dinner = foods.filter((item) => item.category === 'dinner');
+  const lunch = foods.filter((item) => item.category === "lunch");
+  const breakfast = foods.filter((item) => item.category === "breakfast");
+  console.log(dinner);
 
   return (
     <>
@@ -30,7 +34,7 @@ const Food = () => {
         >
           <Tab eventKey="breakfast" title="Breakfast">
             <div className="row row-cols-1 row-cols-md-3 g-4">
-              {foods.slice(0, 6).map((food) => (
+              {breakfast.map((food) => (
                 <FoodItem
                   handleFood={() => {
                     handleFood(food._id);
@@ -43,7 +47,7 @@ const Food = () => {
           </Tab>
           <Tab eventKey="dinner" title="Dinner">
             <div className="row row-cols-1 row-cols-md-3 g-4">
-              {foods.slice(6, 12).map((food) => (
+              {dinner.map((food) => (
                 <FoodItem
                   handleFood={() => {
                     handleFood(food._id);
@@ -56,7 +60,7 @@ const Food = () => {
           </Tab>
           <Tab eventKey="lunch" title="Lunch">
             <div className="row row-cols-1 row-cols-md-3 g-4">
-              {foods.slice(12, 18).map((food) => (
+              {lunch.map((food) => (
                 <FoodItem
                   handleFood={() => {
                     handleFood(food._id);

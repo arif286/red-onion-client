@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../App";
-import image from "../../onion-restaurent/bannerbackground.png";
-import facebook from "../../onion-restaurent/ICON/Facebook.png";
-import google from "../../onion-restaurent/ICON/Google.png";
-import twitter from "../../onion-restaurent/ICON/Twitter.png";
+import image from "../../assets/bannerbackground.png";
+import facebook from "../../assets/ICON/Facebook.png";
+import google from "../../assets/ICON/Google.png";
+import twitter from "../../assets/ICON/Twitter.png";
 import "./Login.css";
 import { handleFacebookSignIn, handleGoogleSingIn, initializeLoginFramework, logInWithEmailPassword } from "./LoginManager";
 

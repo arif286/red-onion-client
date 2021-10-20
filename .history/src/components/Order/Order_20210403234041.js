@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import delivery from '../../onion-restaurent/Image/Group 1151.png';
+import delivery from '../../assets/Image/Group 1151.png';
 const Order = () => {
     return (
       <Container>

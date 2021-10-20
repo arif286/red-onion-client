@@ -2,18 +2,18 @@
 
 <br />
 
-I'm [Ariful Islam](https://pogrammer-arif.web.app), a passionate Full Stack web developer. And also a leaner in [Programming Hero](https://www.programming-hero.com/)
-. Built a [Online food shop](https://red-onion-food-shop.web.app/) website that allows user to buy food on online.
+I'm [Ariful Islam](https://pogrammer-arif.web.app), a passionate Full Stack JavaScript developer. And also a leaner in [Programming Hero](https://www.programming-hero.com/)
+. I Built a [Online food shop](https://red-onion-food-shop.web.app/) website that allows user to buy food on online.
 
 ### About projects and features
 
 - A user can choose their best food and order through the internet
-- User needs to logging first to order foods.
-- firebase authentication applied for logging system.
+- User needs to logging first to order their foods.
+- Firebase authentication applied for logging system.
 - Integrates google map to get user location.
-- Users order and information will be preserve in mongo db.
+- User orders and information will preserve in mongoDB.
 - Users will get update their orders.
-- fully responsive website for any devices.
+- Fully responsive website for any devices.
 
 ### Projects tools
 

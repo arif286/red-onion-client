@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from '../../App';
-import facebook from "../../onion-restaurent/ICON/Facebook.png";
-import google from "../../onion-restaurent/ICON/Google.png";
+import facebook from "../../assets/ICON/Facebook.png";
+import google from "../../assets/ICON/Google.png";
 import "./Login.css";
 import {
-  handleFacebookSignIn,
-  handleGoogleSingIn,
-  initializeLoginFramework
+    handleFacebookSignIn,
+    handleGoogleSingIn,
+    initializeLoginFramework
 } from "./LoginManager";
 
 

@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Alert, Card, Col, Container, Row } from "react-bootstrap";
 import { UserContext } from "../../App";
-import delivery from "../../onion-restaurent/Image/Group 1151.png";
-import noOrder from '../../onion-restaurent/Image/no-order.png';
+import delivery from "../../assets/Image/Group 1151.png";
+import noOrder from '../../assets/Image/no-order.png';
 
 
 const Order = () => {

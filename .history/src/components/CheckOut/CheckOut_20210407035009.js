@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
 import { UserContext } from "../../App";
-import Order from "../../onion-restaurent/Image/confirmOrder.png";
+import Order from "../../assets/Image/confirmOrder.png";
 import "./CheckOut.css";
 import CheckOutFrom from "./CheckOutForm/CheckOutFrom";
 import Map from "./Map/Map";

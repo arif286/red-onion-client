@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import deliveryImg from '../../onion-restaurent/ICON/Group 204.png';
-import burger from '../../onion-restaurent/Image/burger.png';
-import cart from '../../onion-restaurent/Image/cart-bear.png';
-import chefCook from '../../onion-restaurent/Image/chef-cook.png';
+import deliveryImg from '../../assets/ICON/Group 204.png';
+import burger from '../../assets/Image/burger.png';
+import cart from '../../assets/Image/cart-bear.png';
+import chefCook from '../../assets/Image/chef-cook.png';
 
 
 const DeliveryFood = () => {

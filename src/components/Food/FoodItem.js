@@ -11,7 +11,7 @@ const FoodItem = ({food, handleFood}) => {
             onClick={() => {
               handleFood();
             }}
-            className="card h-100"
+            className="card h-100 food-card"
           >
             <img src={picture} className="card-img-top fluid" alt="..." />
             <div className="card-body">

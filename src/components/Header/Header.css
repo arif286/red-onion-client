@@ -11,3 +11,16 @@
   border: none;
   background: none;
 }
+.nav-tabs {
+  border: none;
+}
+.nav-tabs .nav-link.active {
+  color: red;
+  border-bottom: 3px solid red;
+  font-weight: 500;
+}
+.nav-tabs .nav-link {
+  border: none;
+  color: #000;
+  font-weight: 500;
+}

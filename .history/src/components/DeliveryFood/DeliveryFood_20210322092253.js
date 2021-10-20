@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import deliveryImg from '../../onion-restaurent/ICON/Group 204.png';
-import burger from '../../onion-restaurent/Image/burger.png';
+import deliveryImg from '../../assets/ICON/Group 204.png';
+import burger from '../../assets/Image/burger.png';
 
 
 const DeliveryFood = () => {

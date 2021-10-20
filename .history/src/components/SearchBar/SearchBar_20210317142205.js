@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../../onion-restaurent/bannerbackground.png';
+import background from '../../assets/bannerbackground.png';
 const SearchBar = () => {
     const searchBg = {
         bgImage: {

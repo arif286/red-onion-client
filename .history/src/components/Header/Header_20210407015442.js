@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 // import { NavLink } from "react-router-dom";
-import logo from '../../onion-restaurent/logo2.png';
+import logo from '../../assets/logo2.png';
 import './Header.css';
 const Header = () => {
 
