@@ -3,3 +3,10 @@
   transform: scale(1.05);
   transition: 1s;
 }
+.spinner {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
